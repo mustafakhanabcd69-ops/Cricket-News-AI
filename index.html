@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cricket News AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      background: #101820;
+      color: white;
+      font-family: Arial;
+      text-align: center;
+      padding: 25px;
+    }
+    h1 { color: #00d084; }
+    textarea {
+      width: 95%;
+      height: 120px;
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      background: #00d084;
+      padding: 12px 25px;
+      border: none;
+      margin: 15px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🏏 Cricket News AI</h1>
+  <p>Apni cricket news likhein</p>
+
+  <textarea id="news"
+    placeholder="Match ki news yahan likhein..."></textarea>
+
+  <br>
+  <button onclick="makePost()">Create Post</button>
+
+  <h3>Your Cricket Post</h3>
+  <p id="result"></p>
+
+  <script>
+    function makePost() {
+      let news = document.getElementById("news").value;
+      document.getElementById("result").innerText =
+        "🏏 Cricket Update!\n" + news +
+        "\n\n#CricketNews #CricketUpdates";
+    }
+  </script>
+</body>
+</html>
